@@ -33,11 +33,10 @@ console.log(nomsPrenom);
 //Quel âge aurait chaque inventeur aujourd'hui ?
 const ageActuel = [];
 
-for (let i = 0; i < entrepreneurs.length; i++) {
-  const entrepreneur = entrepreneurs[i];
+entrepreneurs.forEach(entrepreneur => {
   const age = 2023 - entrepreneur.year;
   ageActuel.push(`${entrepreneur.first} ${entrepreneur.last} aurait ${age} ans aujourd'hui.`);
-}
+});
 console.log(ageActuel);
 
 //Trie les entrepreneurs par ordre alphabétique du nom de famille.
